@@ -35,12 +35,12 @@ And attach to the control with the desired event.
         Title="{Binding Title}" Height="350" Width="525">
     <Grid>
         <ListBox ItemsSource="{Binding Items}" SelectionMode="Single">
-            <i:InteractionTriggers>
+            <i:Interaction.Triggers>
                 <i:EventTrigger EventName="SelectionChanged">
                     <prism:InvokeCommandAction Command="{Binding SelectedCommand}"
                                                CommandParameter="{Binding MyParameter}" />
                 </i:EventTrigger>
-            </i:InteractionTriggers>
+            </i:Interaction.Triggers>
         </ListBox>
     </Grid>
 </Window>
